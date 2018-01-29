@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<!--php accesses the name property and javascript accesses the id property -->
+<body>
+    <h1>Welcome to Ryan's Personality Profile Quiz!</h1>
+    <h3>Please answer each question.</h3>
+    <!-- Div around our list of questions--> 
+    <div id="questionnaire">
+        <!-- form will run results.php to get user input when submit button is selected -->
+        <form method="get" action="results.php">
+            <ol>
+                <!--List for form questions-->
+                <!-- Question 1-->
+                <li>Where do you prefer to workout?</li>
+                    <!-- HTML form input radio button "checked" sets the default status of the radio button. 
+                        Name"Country Club" listed after input is the displayed name
+                        PHP uses function "is selcted" to grab value of the radio button selected--> 
+                    <input type="radio" name="workout" value="country_club">Country Club
+                    <input type="radio" name="workout" value="outside"> Outside
+                    <input type="radio" name="workout" value="eat" checked> I would rather eat Twinkies!
+                <!-- Question 2 -->
+                <li>Check all the recreation activites you want to pursue in your life.</li>
+                    <input type="checkbox" name="wake_surfing">Wake Surfing<br/>
+                    <input type="checkbox" name="snowmobiling">Snowmobiling<br/>
+                    <input type="checkbox" name="reading">Reading<br/>
+                    <input type="checkbox" name="extreme_hiking">Extreme Hiking<br/>
+                    <input type="checkbox" name="visiting_foreign_countries">Visiting Foreign Countries<br/>
+                    <input type="checkbox" name="motorcycle_tours">Motorcycle tours of the US<br/>
+                <!-- Question 3 -->
+                <li>What is your favorite boys name?</li><input type="text" name="boys_name" id="">
+                <!-- Question 4 -->
+                <li>What is your favorite girls name?</li> <input type="text" name="boys_name" id=""><!-- HTML form input text box-->
+                <!-- Question 5 -->
+                <li>Which of the following are you most likely to do?</li>
+                <select name="likely_task" id=""><!--select is an html form picklist -->
+                    <option value="tanning">Go to a tanning salon.</option>
+                    <option value="hgh">Take Human Growth Hormone (HGH).</option>
+                    <option value="stitch">Stitch up your own finger.</option>
+                </select>
+                <!-- Question 6 -->
+                <li>Describe one of your talents.</li>
+                <textarea name="talents" id="" cols="30" rows="10"></textarea>
+                <br/><br/><!-- line breaks -->
+                <!-- Question 7 -->
+                <li>Select all the TV shows you like.</li>
+                <select name="tv_shows[]" id=""multiple><!--list box that will allow multiple selections -->
+                    <option value="house">House</option>
+                    <option value="breaking_bad">Breaking Bad</option>
+                    <option value="real_housewives_of_new_york">Real Housewives of New York</option>
+                    <option value="grays_anatomy">Gray's Anatomy</option>
+                    <option value="ncis">NCIS</option>
+                    <option value="csi_miami">CSI: Miami</option>
+                    <option value="chicago_hope">Chicago Hope</option>
+                    <option value="the_bachelor">The Bachelor</option>
+                    <option value="survivor">Survivor</option>
+                </select>
+            </ol>
+            <!--Submit button to trigger php -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+#questionnaire {
+    border-style: solid;
+    border-radius: 7px;
+    border-color: purple;
+    width:500px;
+}
+#results{
+    border-style: solid;
+    border-radius: 7px;
+    border-color: purple;
+    width:300px;
+    padding: 10px 10px 10px 10px; 
+}
