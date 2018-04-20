@@ -1,0 +1,17 @@
+#survey{
+    border-style: solid;
+    border-color: palegreen;
+    border-radius: 10px;
+    width:600px;
+    padding: 10px 10px 10px 10px;
+}
+#result{
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    width:600px;
+    padding: 10px 10px 10px 10px;
+}
+.errors{
+    color:red;
+}
