@@ -22,7 +22,7 @@
 <!-- the head section /INFO3426/Assignment_6-->
 <head>
   <title>The Book Loan System</title>
-  <link rel="stylesheet" type="text/css" href="localhost/INFO3426/Assignment_6/styles.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost/INFO3426/Assignment_6/styles.css">
 </head>
 
 <!-- the body section -->

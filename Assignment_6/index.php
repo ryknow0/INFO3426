@@ -15,7 +15,7 @@ include 'view/header.php';
            <a href="checkout/index.php?action=list_available_books">Checkout</a>
        </li>
        <li>
-           <a href="waitlist">Waitlist</a>
+           <a href="waiting_list">Waitlist</a>
        </li>               
    </ul>
 </main>
