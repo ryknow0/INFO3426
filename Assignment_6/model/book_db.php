@@ -1,5 +1,6 @@
 <?php
-//requires the page to be availabile in order to use this page
+//requires the page to be availabile in order to use this pag
+//inculdes the database connection file to enable the page to connect to the database
 require('database.php');
 
 //generte sql query to gather the bookId, Title and Authors from the book table
@@ -8,6 +9,7 @@ function get_all_books() {
     //refers to variable delcared outside of the function
    global $db;
    //read the results of the query into the arry of arrays
+   //each item from teh array is a row from the table
    $query = 'SELECT BookId, Title, Authors FROM book';
    $statement = $db->prepare($query);
    $statement->execute();
@@ -18,6 +20,7 @@ function get_all_books() {
 }
 
 function get_available_books() {
+    //use global key word that allows a variable to be used that was declared out side of the function
    global $db;
    $query = 'SELECT BookId, Title, Authors
    FROM book b

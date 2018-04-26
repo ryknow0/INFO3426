@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();//allows us to get acces to the session variables
 require('../model/checkout_db.php');
 mb_internal_encoding('UTF-8');
 
@@ -12,10 +12,10 @@ if ($action == NULL) {
 }
 
 if ($action == 'list_available_books') {
-   header('location:http://localhost/INFO3426/Assignment_6/index.php?action=list_available_books');
+   header('location:http://localhost/INFO3426/Assignment_6/book/index.php?action=list_available_books');
 }
 else if ($action == 'checkout') {
-   $book_id = filter_input(INPUT_GET,'BookId');
+   $book_id = filter_input(INPUT_GET,'BookId');//gets book id from url (get)
    $user_id=$_SESSION['UserId'];//grab session dat from user to limit use to the correct user
   
    if (check_out_book($user_id, $book_id) == 1) {

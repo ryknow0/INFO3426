@@ -8,7 +8,7 @@
    $password = 'pa55word';
   
    try {
-       //db = global variable
+       //db = global variable it is declared here and used other plces on the site
        $db = new PDO($dsn, $username, $password);
    } catch (PDOException $e) {
        $error_message = $e->getMessage();

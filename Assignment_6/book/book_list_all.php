@@ -4,6 +4,7 @@
        <h1>All Books</h1>
        <table border="1">
        <tr><td>Title</td><td>Author</td><td>Action</td></tr>
+       <!-- Loop through books array and displys information for book-->
        <?php foreach ($books as $book) :?>
            <tr>
                <?php echo '<td width=\'400\'>'. $book['Title'] . '</td><td width=\'200\'>' .  $book['Authors'] . '</td><td>

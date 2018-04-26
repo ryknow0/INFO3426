@@ -15,6 +15,8 @@ function get_books_checked_out() {
 }
 function check_out_book($user_id, $book_id) {//databse connection
    global $db;
+   //pre builds the query and is safer than a normal connection type
+   //a prepared statement
    $stmt1 = $db->prepare('SELECT BookId from  checkout WHERE BookId = :bookid');
    $stmt1->bindParam(':bookid', $book_id);
    $stmt1->execute();
@@ -25,6 +27,7 @@ function check_out_book($user_id, $book_id) {//databse connection
    if(!$already_checked_out){
        $stmt = $db->prepare("INSERT INTO checkout (UserId, BookId, CheckoutDate, DueDate)
        VALUES (:userid, :bookid, now(), now()+ INTERVAL 45 DAY )");
+       //bind values to placeholders
        $stmt->bindParam(':userid', $user_id);
        $stmt->bindParam(':bookid', $book_id);
        $stmt->execute();

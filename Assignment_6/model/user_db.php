@@ -23,7 +23,7 @@ function login($email, $password){
    //execute passes the statement (query) and sends it across the connection to the db sever       
    $statement->execute();
    // fetch is cursor runction
-   $user = $statement->fetch(PDO::FETCH_BOTH);
+   $user = $statement->fetch(PDO::FETCH_BOTH);//access the return array allows you to use names or numbers to access array items
    $statement->closeCursor();
    //$user is an aray of 4 elements
    var_dump($user);
