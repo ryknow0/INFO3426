@@ -6,10 +6,7 @@
        <tr><td>Firstname</td><td>Lastname</td><td>Email</td><td>Action</td></tr>
        <?php foreach ($users as $user) :?>
            <tr>
-               <?php echo '<td>'.
-               $user['Firstname'] . '</td><td>' . 
-               $user['Lastname'] . '</td><td>'. 
-               $user['Email'] .'</td><td>&nbsp;</td>'; ?>
+               <?php echo '<td>'. $user['Firstname'] . '</td><td>' .  $user['Lastname'] . '</td><td>'.  $user['Email'] .'</td><td><a href=\'/INFO3426/Assignment_7/checkout/index.php?action=checked_out_by_user&UserId='.$user['UserId'].'\'>Books Checked Out</a></td>'; ?>
            </tr>
        <?php endforeach; ?>
        </table>

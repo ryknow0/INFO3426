@@ -1,3 +1,4 @@
+<!-- Front End controller -->
 <?php
 session_start();
 include 'view/header.php';
@@ -9,14 +10,20 @@ include 'view/header.php';
            <a href="user">Users</a>
        </li>
        <li>
-           <a href="book">Books</a>
+           <a href="event">Events</a>
        </li>
        <li>
-           <a href="checkout/index.php?action=list_available_books">Checkout</a>
+           <a href="groups">Groups</a>
        </li>
        <li>
-           <a href="waitlist">Waitlist</a>
-       </li>               
+           <a href="calendar">Calendar</a>
+       </li>
+       <li>
+           <a href="groupmembership">GroupMembership</a>
+       </li> 
+       <li>
+           <a href="share">CalendarShares</a>
+       </li>                         
    </ul>
 </main>
 <?php include 'view/footer.php'; ?>

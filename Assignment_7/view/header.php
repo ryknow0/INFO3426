@@ -1,3 +1,6 @@
+<!--If you are logged in then the program will progress past the first if statement
+if you have not logged in then it will redirect you to the login page -->
+
 <?php
    if ( !isset($_SESSION['Email']) ) {
        header("location:loginform.php");
@@ -7,13 +10,14 @@
 ?>
 <!DOCTYPE html>
 <html>
-<!-- the head section /INFO3426/Assignment_6-->
+<!-- the head section /INFO3426/Assignment_7-->
 <head>
-  <title>The Book Loan System</title>
-  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <title>The Utah County Event Tracker</title>
+  <link rel="stylesheet" type="text/css" href="http://localhost/INFO3426/Assignment_7/styles.css">
 </head>
 
 <!-- the body section -->
 <body>
 Welcome <?=$first_name?> <?=$last_name?>
-<header><h1>The Book Loan System</h1> </header>
+<header><h1>The Utah County Event Tracker</h1> </header>
+       

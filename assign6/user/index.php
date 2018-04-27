@@ -20,12 +20,12 @@ elseif($action == 'login'){
    $user = login($email, $password);
    var_dump($user);
    if($user == NULL){
-       header("Location: /INFO3426/Assignment_6/loginform.php?errors=Missing login credentials.");
+       header("Location: /INFO3426/Assignment_6/assign6/loginform.php?errors=Missing login credentials.");
    } else{
        $_SESSION['Email'] = $user['Email'];
        $_SESSION['Firstname'] = $user['Firstname'];
        $_SESSION['Lastname'] = $user['Lastname'];
        $_SESSION['UserId'] = $user['UserId'];
-       header('Location: /INFO3426/Assignment_6/index.php');
+       header('Location: /INFO3426/Assignment_6/assign6/index.php');
    }
 }

@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 
-header('location:/INFO3426/Assignment_6/index.php');
+header('location:http://localhost/INFO3426/Assignment_7/index.php');
 ?>
