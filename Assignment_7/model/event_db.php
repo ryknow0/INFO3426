@@ -35,10 +35,27 @@ function get_event($event_id) {
    $stmt->closeCursor();
    return $event;
 }
-
+//function that adds a newly created event to the database that was taken from user input event_add.php=>/event/index.php
 function create_event($event_name, $event_type, $event_location, $start_time, $end_time, $hours_duration){
    global $db;
+   $query = 'INSERT INTO event(EventName, EventType, EventLocation, 
+                                StartTime, EndTime, HoursDuration)
+            VALUES (:eventname, :eventtype, :eventlocation, :starttime, 
+                    :endtime, :hoursduration )';
+                    var_dump($query);
+   $stmt = $db->prepare($query);
+   $stmt->bindParam(':eventname', $event_name);
+   $stmt->bindParam(':eventtype', $event_type);
+   $stmt->bindParam(':eventlocation', $event_location);
+   $stmt->bindParam(':starttime', $start_time);
+   $stmt->bindParam(':endtime', $end_time);
+   $stmt->bindParam(':hoursduration', $hours_duration);
+   //executes the query
    
+   $stmt->execute();
+   //var_dump($stmt);
+   //success check will return 1 row if succesful and 0 if it fails
+   return $stmt->rowCount();  
 }
 
 function update_event($event_id, $event_name, $event_type, $event_location, $start_time, $end_time, $hours_duration){

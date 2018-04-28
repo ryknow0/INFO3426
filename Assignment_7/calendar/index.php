@@ -24,7 +24,7 @@ else if($action == 'add_first'){//adds event to calendar
     //All of these functions are in the calendar db which associate to db queries
    $event_id = filter_input(INPUT_GET, 'event_id');
    $user_id=$_SESSION['UserId'];
-   $records_added = add_event($event_id, $user_id);//if there is a record added it will return a 1
+   //$records_added = add_event($event_id, $user_id);//if there is a record added it will return a 1
    $event = get_event_info($event_id);
    $calendars = get_calendar_entries($user_id);
    include('calendar_probability.php');
@@ -33,6 +33,7 @@ else if($action == 'add_second'){ //if probability is entered then save the data
    $event_id = filter_input(INPUT_POST, 'event_id');
    $probability = filter_input(INPUT_POST, 'probability');
    $user_id=$_SESSION['UserId'];
+    //var_dump($probability);
    $added_rows = add_to_calendar($event_id, $user_id, $probability);
    if($added_rows > 0){
        $message = 'New Event Added to Calendar';

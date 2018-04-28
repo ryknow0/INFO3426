@@ -1,9 +1,10 @@
+<!-- Read DB Opertion-->
 <?php include '../view/header.php'; ?>
 <main>
  <section>
      <h1>All Events</h1>
      <?php echo $message .'<br/>'; ?>
-     <a href="/Assign7/event/index.php?action=add_event">Add Event</a>//calls add function
+     <a href="/INFO3426/Assignment_7/event/index.php?action=add_event">Add Event</a><!-- calls add function -->
      <table border="1">
      <tr><td>EventName</td><td>StartTime</td><td>Event Type</td><td>Event Location</td><td>Hours Duration</td><td>Action</td><td>Modify</td></tr>
      <?php foreach ($events as $event) :?>
@@ -16,6 +17,7 @@
              $event['HoursDuration'] .'</td><td>' .
              '<a href=\'../calendar/index.php?action=add_first&event_id='. $event['EventId'] .'\'>Add to Calendar</a></td><td>' .
              '<a href=\'/INFO3426/Assignment_7/event/index.php?action=edit_event&event_id='.$event['EventId'].'\'>Edit</a> | <a href=\'/INFO3426/Assignment_7/event/index.php?action=delete_event_confirm&event_id='.$event['EventId'].'\'>Delete</a> </td>';
+             //grab eventId out of the associated array 
              ?>
          </tr>
      <?php endforeach; ?>
